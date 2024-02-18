@@ -1,0 +1,51 @@
+\documentclass{bmstu}
+
+\bibliography{biblio}
+\usepackage{svg}
+\usepackage{algpseudocode}
+\usepackage{longtable}
+\usepackage{listings}
+
+\definecolor{darkgray}{gray}{0.15}
+
+\lstset{
+	language=python, % выбор языка для подсветки
+	basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+	numbers=left, % где поставить нумерацию строк (слева\справа)
+	%numberstyle=, % размер шрифта для номеров строк
+	stepnumber=1, % размер шага между двумя номерами строк
+	numbersep=5pt, % как далеко отстоят номера строк от подсвечиваемого кода
+	frame=single, % рисовать рамку вокруг кода
+	tabsize=2, % размер табуляции по умолчанию равен 4 пробелам
+	captionpos=t, % позиция заголовка вверху [t] или внизу [b]
+	breaklines=true,
+	breakatwhitespace=true, % переносить строки только если есть пробел
+	backgroundcolor=\color{white},
+	keywordstyle=\color{blue}
+}
+
+\begin{document}
+
+\setlist[enumerate]{label=\arabic*)}
+\setlist[itemize]{label=---}
+
+\makereporttitle{Информатика и системы управления}
+{Программное обеспечение ЭВМ и информационные технологии}
+{лабораторной работе № 6}
+{Анализ Алгоритмов}
+{Методы решения задачи коммивояжёра}
+{}{А. А. Кузин/ИУ7-51Б}{Л. Л. Волкова}
+
+
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\setcounter{page}{2}
+\include{01-analytic}
+\include{02-constuructor}
+\include{03-technologic}
+\include{04-research}
+\include{05-conclusion}
+
+\makebibliography
+
+\end{document}

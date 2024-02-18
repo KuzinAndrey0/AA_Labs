@@ -1,0 +1,16 @@
+*.exe
+*.dat
+*.bkp
+*.dtmp
+*.aux
+*.blg
+*.gz
+*.out
+*.log
+*.toc
+*.fls
+*.bbl
+*.fdb_latexmk
+*.o
+mat?.txt
+.vscode/

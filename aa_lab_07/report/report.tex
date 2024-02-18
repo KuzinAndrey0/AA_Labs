@@ -1,0 +1,69 @@
+\documentclass{bmstu}
+
+\bibliography{biblio}
+\usepackage{svg}
+\usepackage{algpseudocode}
+
+\lstset{%
+	language=python,   					% выбор языка для подсветки	
+	basicstyle=\small\sffamily,			% размер и начертание шрифта для подсветки кода
+	numbers=left,						% где поставить нумерацию строк (слева\справа)
+	%numberstyle=,					% размер шрифта для номеров строк
+	stepnumber=1,						% размер шага между двумя номерами строк
+	numbersep=5pt,						% как далеко отстоят номера строк от подсвечиваемого кода
+	keywordstyle=\color{blue}\bfseries\em,
+        keywords={,input, output, return, datatype, function, in, if, else, foreach, while, begin, end, } %add the keywords you want, or load a language as Rubens explains in his comment above.
+	stringstyle=\color{red},
+	commentstyle=\color{gray},
+	frame=single,						% рисовать рамку вокруг кода
+	tabsize=4,							% размер табуляции по умолчанию равен 4 пробелам
+	captionpos=t,						% позиция заголовка вверху [t] или внизу [b]
+	breaklines=true,					
+	breakatwhitespace=true,				% переносить строки только если есть пробел
+	escapeinside={\#*}{*)},				% если нужно добавить комментарии в коде
+	backgroundcolor=\color{white},
+	mathescape=true,
+}
+
+\lstdefinestyle{asm}{
+	language={[x86masm]Assembler},
+	backgroundcolor=\color{white},
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	commentstyle=\color{gray},
+	numbers=left,
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	frame=single,
+	tabsize=4,
+	captionpos=b,
+	breaklines=true,
+}
+
+\begin{document}
+
+\setlist[enumerate]{label=\arabic*)}
+\setlist[itemize]{label=---}
+
+\makereporttitle{Информатика и системы управления}
+{Программное обеспечение ЭВМ и информационные технологии}
+{лабораторной работе № 7}
+{Анализ Алгоритмов}
+{Алгоритмы поиска}
+{}{А. А. Кузин/ИУ7-51Б}{Л. Л. Волкова}
+
+
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\setcounter{page}{2}
+\include{01-analytic}
+\include{02-constuructor}
+\include{03-technologic}
+\include{04-research}
+\include{05-conclusion}
+
+\makebibliography
+
+\end{document}

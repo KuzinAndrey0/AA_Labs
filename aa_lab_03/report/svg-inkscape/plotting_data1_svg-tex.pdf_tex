@@ -1,0 +1,102 @@
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'plotting_data1_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{480bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5625)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{plotting_data1_svg-tex.pdf}}%
+    \put(0.066875,0.0559375){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{plotting_data1_svg-tex.pdf}}%
+    \put(0.066875,0.1365625){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{plotting_data1_svg-tex.pdf}}%
+    \put(0.066875,0.2171875){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{plotting_data1_svg-tex.pdf}}%
+    \put(0.066875,0.2978125){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{plotting_data1_svg-tex.pdf}}%
+    \put(0.066875,0.37842188){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{plotting_data1_svg-tex.pdf}}%
+    \put(0.066875,0.45904688){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{plotting_data1_svg-tex.pdf}}%
+    \put(0.066875,0.53967188){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{plotting_data1_svg-tex.pdf}}%
+    \put(0.075625,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{plotting_data1_svg-tex.pdf}}%
+    \put(0.1654375,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{plotting_data1_svg-tex.pdf}}%
+    \put(0.25525,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{plotting_data1_svg-tex.pdf}}%
+    \put(0.3450625,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{plotting_data1_svg-tex.pdf}}%
+    \put(0.434875,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}200\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{plotting_data1_svg-tex.pdf}}%
+    \put(0.5246875,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}250\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{plotting_data1_svg-tex.pdf}}%
+    \put(0.61448437,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}300\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{plotting_data1_svg-tex.pdf}}%
+    \put(0.70429688,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}350\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{plotting_data1_svg-tex.pdf}}%
+    \put(0.79410938,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}400\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{plotting_data1_svg-tex.pdf}}%
+    \put(0.88392188,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}450\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{plotting_data1_svg-tex.pdf}}%
+    \put(0.97373438,0.0371875){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}500\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{plotting_data1_svg-tex.pdf}}%
+    \put(0.02203125,0.30185937){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Время, мс\end{tabular}}}}}%
+    \put(0.52467188,0.00703125){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Размер массива, шт\end{tabular}}}}%
+    \put(0.513125,0.52092187){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Плавная сортировка\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{plotting_data1_svg-tex.pdf}}%
+    \put(0.513125,0.50217188){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Сортировка перемешиванием\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{plotting_data1_svg-tex.pdf}}%
+    \put(0.513125,0.48342188){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Сортировка Шелла\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{plotting_data1_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

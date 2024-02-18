@@ -1,0 +1,194 @@
+\chapter{Конструкторская часть}
+
+В данном разделе будут приведены псевдокоды алгоритмов сортировок, описание используемых типов данных и структуры программного обеспечения.
+
+К программе предъявлен ряд функциональных требований:
+
+\begin{itemize}
+    \item наличие интерфейса для выбора действий;
+    \item возможность ввода чисел, используя ввод с клавиатуры;
+    \item возможность произвести замеры процессорного времени работы реализованных алгоритмов сортировок.
+\end{itemize}
+
+\section{Разработка алгоритмов}
+
+В листинге \ref{lst:shaker.pas} представлен псевдокод сортировки перемешиванием.
+
+В листинге \ref{lst:shell.pas} представлен псевдокод сортировки Шелла.
+
+В листинге \ref{lst:smooth.pas} представлен псевдокод плавной сортировки.
+
+
+
+\includelistingpretty
+    {shaker.pas}
+    {pascal}
+    {псевдокод сортировки перемешиванием}
+
+
+\includelistingpretty
+    {shell.pas}
+    {pascal}
+    {псевдокод сортировки Шелла}
+
+\includelistingpretty
+    {smooth.pas}
+    {pascal}
+    {псевдокод плавной сортировки}
+
+
+
+\section{Описание используемых типов данных}
+
+При реализации алгоритмов будет использован \textit{массив}~--- упорядоченный набор элементов \texttt{целочисленного типа}.
+
+\section{Модель вычислений для проведения оценки трудоемкости алгоритмов}
+
+Для последующего вычисления трудоемкости необходимо ввести модель вычислений:
+
+\begin{enumerate}
+	\item операции из списка \ref{eq:operations1} имеют трудоемкость \textbf{1};
+	\begin{equation}
+		\label{eq:operations1}
+		\begin{gathered}
+			+, -, =, +=, -=, ==, !=, <, >, <=, >=, [], \\ ++, --, \&\&, >>, <<, ||, \&, |
+		\end{gathered}
+	\end{equation}
+	\item операции из списка \ref{eq:operations2} имеют трудоемкость \textbf{2};
+	\begin{equation}
+		\label{eq:operations2}
+		*, /, \%, *=, /=, \%=
+	\end{equation}
+	\item трудоемкость условного оператора \texttt{if условие then A else B} рассчитывается как \ref{eq:if};
+	\begin{equation}
+		\label{eq:if}
+		f_{if} = f_{\text{условия}} + 
+		\begin{cases}
+			f_{A}, & \text{в случае выполнеия условия,}\\
+			f_{B}, & \text{иначе}.
+		\end{cases}
+	\end{equation}
+	\item трудоемкость цикла рассчитывается как \ref{eq:for}
+	\begin{equation}
+		\label{eq:for}
+		\begin{gathered}
+			f_{for} = f_{\text{инициализация}} + f_{\text{сравнения}} + M_{\text{итераций}} \cdot (f_{\text{тело}} +\\
+			+ f_{\text{инкремент}} + f_{\text{сравнения}});
+		\end{gathered}
+	\end{equation}
+	\item трудоемкость вызова функции равна 0.
+\end{enumerate}
+
+\section{Трудоемкость алгоритмов}
+В следующих частях будут приведены рассчеты трудоемкостей алгоритмов сортировок.
+
+\subsection{Плавная сортировка (smoothsort)}
+На первом этапе перебирается N элементов, добавляя его в уже имеющиеся слева кучи. Добавление в кучу обходится в
+\begin{equation}
+  f_{elem} = O(1)
+\end{equation}
+  затем для кучи нужно сделать просейку.
+
+В неупорядоченных данных просейка для каждого добавления обходится в:
+\begin{equation}
+f_{unsort} = O(log(N))
+\end{equation}
+так как из-за случайных чисел просейке приходится проходить уровни дерева часто до самого низа.
+
+Поэтому, на первом этапе наилучшая сложность по времени:
+для упорядоченных чисел:
+\begin{equation}
+f_{sort} = O(N)
+\end{equation} 
+для случайных чисел:
+\begin{equation}
+f_{unsort} = O(N \cdot log(N))
+\end{equation} 
+
+Для второго этапа ситуация аналогичная. При обмене очередного максимума опять необходимо просеять кучу, в корне которой он находился.
+
+На втором этапе наилучшая сложность по времени такая же как и на первом:
+для упорядоченных чисел:
+\begin{equation}
+f_{sort} = O(N)
+\end{equation} 
+для случайных чисел:
+\begin{equation}
+f_{unsort} = O(N \cdot log(N))
+\end{equation} 
+
+Складывая временные сложности для первого и второго этапа:
+для упорядоченных чисел:
+\begin{equation}
+f_{best} = O(2 \cdot N) = O(N)
+\end{equation}  
+В общем, худшая и средняя временная сложность для плавной сортировки:
+\begin{equation}
+f_{worst} = O(2 \cdot N \cdot log(N)) = O(N \cdot log(N))
+\end{equation} 
+
+
+
+\subsection{Сортировка перемешиванием}
+\begin{itemize}
+	\item Трудоёмкость сравнения внешнего цикла $while$, которая вычисляется по формуле (\ref{for:bubble_outer}).
+	\begin{equation}
+		\label{for:bubble_outer}
+		f_{outer} = 1 + 2 \cdot (N - 1).
+	\end{equation}
+	\item Суммарная трудоёмкость внутренних циклов, количество итераций которых меняется в промежутке $[1..N-1]$, которая вычисляется по формуле (\ref{for:bubble_inner}).
+	\begin{equation}
+		\label{for:bubble_inner}
+		f_{inner} = 5(N - 1) + \frac{2 \cdot (N - 1)}{2} \cdot (3 + f_{if}).
+	\end{equation}
+	\item Трудоёмкость условия во внутреннем цикле, которая вычисляется по формуле (\ref{for:bubble_if}).
+	\begin{equation}
+		\label{for:bubble_if}
+		f_{if} = 4 + \begin{cases}
+			0, & \text{л.с.}\\
+			9, & \text{х.с.}\\
+		\end{cases}
+	\end{equation}
+\end{itemize}
+
+Трудоёмкость в \textbf{лучшем} случае (\ref{for:bubble_best}):
+\begin{equation}
+	\label{for:bubble_best}
+	f_{best} = -3 + \frac{3}{2} N + \approx \frac{3}{2} N = O(N).
+\end{equation}
+
+Трудоёмкость в \textbf{худшем} случае (\ref{for:bubble_worst}):
+\begin{equation}
+	\label{for:bubble_worst}
+	f_{worst} = -3 - 8N + 8N^2 \approx 8N^2 = O(N^2).
+\end{equation}
+\subsection{Сортировка Шелла}
+Трудоемкость в лучшем случае при отсортированном массиве, когда ничего не обменивается, но все же данные рассматриваются. Выведена в \newline формуле (\ref{сomplexity:shell_best}).
+\begin{equation}
+	\label{сomplexity:shell_best}
+	\begin{gathered}
+		f_{best} = 3 + 4 + \frac{N}{4} \cdot (3 + 2 + log(N) \cdot (2 + 4 + 4)) = \\
+		= 7 + \frac{5N}{4} + \frac{5N \cdot log(N)}{2} = O(N \cdot log(N))
+	\end{gathered}
+\end{equation}
+
+Трудоемкость в худшем случае при отсортированном массиве в обратном порядке. Выведена в формуле (\ref{сomplexity:shell_worst}).
+\begin{equation}
+	\label{сomplexity:shell_worst}
+	\begin{gathered}
+		f_{worst} = 7 + \frac{N}{4} \cdot (5 + log(N) \cdot (10 + log(N) \cdot (6 + 4))) =\\
+		= 7 + \frac{5N}{4} + \frac{5N \cdot log(N)}{2} + \frac{5N \cdot log^2(N)}{2} = O(N \cdot log^2(N))
+	\end{gathered}
+\end{equation}
+
+\section*{Вывод}
+\addcontentsline{toc}{section}{Вывод}
+
+В данном разделе на основе теоретических данных были перечислены требования к ПО, сделаны псевдокоды реализуемых алгоритмов и представлена модель вычислений на основе данных, полученных на этапе анализа.
+
+При отсортированном массиве асимптотическая сложность алгоритмов плавной сортировки и сортировки перемешиванием стремится к $O(N)$, в то время как сортировка шелла к $O(N)$.
+
+Самыми эффективными по трудоемкости при неотсортированном массиве являются сортировки перемешиваем и Шелла, имеющие одинаковую асимптотическую сложность -  $O(N \cdot log(N))$
+
+
+\clearpage
